@@ -1,12 +1,12 @@
 require "spec_helper"
-
 require "manifests-vmc-plugin/errors"
-
 
 describe VMCManifests::InvalidManifest do
   let(:file) { "/path/to/file" }
 
   subject { described_class.new(file) }
+
+  it { should be_kind_of VMC::UserFriendlyError }
 
   describe "#initialize" do
     it "is initialized with a file" do
@@ -26,4 +26,18 @@ describe VMCManifests::InvalidManifest do
       expect(subject.file).to eq(file)
     end
   end
+end
+
+describe VMCManifests::CircularDependency do
+  let(:app) { "app" }
+  subject { described_class.new(app) }
+
+  it { should be_kind_of VMC::UserFriendlyError }
+end
+
+describe VMCManifests::UnknownSymbol do
+  let(:symbol) { "symbol" }
+  subject { described_class.new(symbol) }
+
+  it { should be_kind_of VMC::UserFriendlyError }
 end

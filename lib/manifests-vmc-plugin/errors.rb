@@ -1,5 +1,7 @@
+require 'vmc/errors'
+
 module VMCManifests
-  class InvalidManifest < RuntimeError
+  class InvalidManifest < VMC::UserFriendlyError
     attr_reader :file
 
     def initialize(file)
@@ -11,7 +13,7 @@ module VMCManifests
     end
   end
 
-  class CircularDependency < RuntimeError
+  class CircularDependency < VMC::UserFriendlyError
     def initialize(app)
       @app = app
     end
@@ -21,7 +23,7 @@ module VMCManifests
     end
   end
 
-  class UnknownSymbol < RuntimeError
+  class UnknownSymbol < VMC::UserFriendlyError
     def initialize(sym)
       @sym = sym
     end

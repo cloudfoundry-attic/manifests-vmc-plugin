@@ -1,20 +1,20 @@
 GIT
   remote: git://github.com/cloudfoundry/vmc-lib.git
-  revision: fb723a8a35d24623903bd06672193113f8fe66e1
+  revision: 1c9b159ec587af1ababd8694b6e942d18c781f72
   submodules: true
   specs:
-    cfoundry (0.5.3.rc4)
-      cf-uaa-lib (~> 1.3.8)
+    cfoundry (0.5.3.rc5)
+      cf-uaa-lib (~> 1.3.10)
       multi_json (~> 1.3)
       multipart-post (~> 1.1)
       rubyzip (~> 0.9)
 
 GIT
   remote: git://github.com/cloudfoundry/vmc.git
-  revision: 7c1f7a68113490a2f5bd1661cde8f16ec7398ce6
+  revision: f97eef807f80f69c0848c32d3566d88562d0dcfe
   specs:
-    vmc (0.5.1.rc3)
-      cfoundry (>= 0.5.3.rc4, < 0.6)
+    vmc (0.5.1.rc4)
+      cfoundry (>= 0.5.3.rc5, < 0.6)
       clouseau (~> 0.0)
       interact (~> 0.5)
       json_pure (~> 1.6)
@@ -29,7 +29,7 @@ GEM
     addressable (2.3.3)
     caldecott-client (0.0.2)
       multi_json (~> 1.3)
-    cf-uaa-lib (1.3.8)
+    cf-uaa-lib (1.3.10)
       multi_json
     clouseau (0.0.2)
       rubyzip (~> 0.9.9)
@@ -42,7 +42,7 @@ GEM
       cfoundry (>= 0.5.3.rc4, < 0.6)
     mime-types (1.21)
     mothership (0.5.1)
-    multi_json (1.6.1)
+    multi_json (1.7.1)
     multipart-post (1.2.0)
     rake (10.0.3)
     rest-client (1.6.7)
