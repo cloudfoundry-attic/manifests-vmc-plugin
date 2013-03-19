@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/cloudfoundry/vmc.git
-  revision: f97eef807f80f69c0848c32d3566d88562d0dcfe
+  revision: 928b3f058f0aba6890f1efc5ad24056cc2f9a96d
   specs:
     vmc (0.5.1.rc4)
       cfoundry (>= 0.5.3.rc5, < 0.6)
