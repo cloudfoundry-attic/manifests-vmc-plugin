@@ -186,7 +186,7 @@ module VMCManifests
       meta["command"] = cmd
     end
 
-    if buildpack = app.buildpack
+    if app.respond_to?("buildpack") and buildpack = app.buildpack
       meta["buildpack"] = buildpack
     end
 
