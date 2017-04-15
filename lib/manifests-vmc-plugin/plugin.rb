@@ -104,6 +104,7 @@ class ManifestsPlugin < VMC::App::Base
           a
         },
         :push_app => proc { |a|
+          setup_env(a, app_manifest) if input[:reset]
           setup_services(a, app_manifest)
           a
         }
